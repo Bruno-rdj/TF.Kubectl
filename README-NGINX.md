@@ -9,6 +9,27 @@ Este repositório contém os arquivos e instruções para o exercício de gerenc
 - [Minikube](https://minikube.sigs.k8s.io/docs/start)
 - Git
 
+## Estrutura do Projeto
+
+```
+TF.Kubectl/
+├── compare-names-app/       # Aplicação de comparação de nomes
+│   ├── src/
+│   │   └── app.py          # Código fonte da aplicação Streamlit
+│   └── requirements.txt    # Dependências da aplicação
+├── imagens/                # Capturas de tela das aplicações
+│   └── .gitkeep            # Arquivo para manter a pasta no Git mesmo vazia
+├── k8s/                    # Arquivos Kubernetes para a aplicação Compare Names
+│   ├── deployment.yaml
+│   └── service.yaml
+├── docker-compose.yml      # Configuração para execução local com Docker Compose
+├── Dockerfile              # Instruções para construir a imagem Docker
+├── nginx-deployment.yaml   # Deployment do Nginx com 2 réplicas
+├── nginx-service.yaml      # Serviço NodePort para o Nginx
+├── README-COMPARE-APP.md   # Instruções para a aplicação Compare Names
+└── README-NGINX.md         # Instruções detalhadas para o exemplo do Nginx
+```
+
 ## Instruções de Uso
 
 ### 1. Verificar o Status do Cluster
@@ -42,6 +63,8 @@ kubectl get services
 # Obter a URL para acessar a aplicação
 minikube service nginx-service --url
 ```
+
+Acesse a URL no navegador para visualizar a página do Nginx.
 
 ### 4. Escalar a Aplicação
 
@@ -91,3 +114,6 @@ kubectl get services
 
 ### Pods em Execução (5 réplicas)
 ![Pods em Execução](imagens/pods-running.png)
+## Aplicações Adicionais
+
+Este repositório também contém uma aplicação adicional "Compare Names App" desenvolvida com Streamlit. Para instruções sobre como executar esta aplicação, consulte o arquivo [README-COMPARE-APP.md](README-COMPARE-APP.md).
