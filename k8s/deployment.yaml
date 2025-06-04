@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-compare-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-compare
+  template:
+    metadata:
+      labels:
+        app: app-compare
+    spec:
+      containers:
+      - name: app-compare
+        image: app-compare:v1  # imagem local
+        imagePullPolicy: Never      # não tenta baixar do Docker Hub
+        ports:
+        - containerPort: 8000
