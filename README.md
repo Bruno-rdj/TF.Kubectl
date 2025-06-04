@@ -87,7 +87,7 @@ kubectl get services
 ## Imagens
 
 ### Página do Nginx
-![Página do Nginx](imagens/nginx-page.png)
+![Página do Nginx](imagens/Captura de Tela (1).png)
 
 ### Pods em Execução (5 réplicas)
-![Pods em Execução](imagens/pods-running.png)
+![Pods em Execução](imagens/Captura de Tela (4).png)
